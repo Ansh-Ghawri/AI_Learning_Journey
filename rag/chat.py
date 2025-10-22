@@ -15,7 +15,7 @@ embedding_model = OpenAIEmbeddings(
 vector_db = QdrantVectorStore.from_existing_collection(
     url="http://localhost:6333",
     embedding=embedding_model,
-    collection_name="learning_cloud_computing",
+    collection_name="learning_AI_agents",
 )
 print("Connection to vector database established...")
 

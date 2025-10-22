@@ -8,7 +8,7 @@ from langchain_qdrant import QdrantVectorStore
 
 load_dotenv()
 
-pdf_path = Path(__file__).parent / "cloud_computing_book.pdf"
+pdf_path = Path(__file__).parent / "AI_agents.pdf"
 
 # Load this file in python program
 loader = PyPDFLoader(file_path=pdf_path)
@@ -31,7 +31,7 @@ vector_store = QdrantVectorStore.from_documents(
     documents=chunks,
     embedding=embedding_model,
     url="http://localhost:6333",
-    collection_name="learning_cloud_computing",
+    collection_name="learning_AI_agents",
 )
 
 print("Indexing of documents completed...")
